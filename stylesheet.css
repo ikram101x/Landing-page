@@ -3,3 +3,47 @@
     margin: 0;
     padding: 0;
 }
+
+
+.NavContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     background: rgb(0, 0, 0);
+     position: sticky;
+}
+.Logo{
+    margin: 0 0 0 .60em;
+    font-size: 20px;
+    padding-left: 2em;
+    
+}
+.Logo a{
+    color: rgb(207, 207, 207);
+}
+.Logo, Navbar{
+    list-style: none;
+    text-transform: capitalize;
+}
+.Logo a, .Navbar a{
+    text-decoration: none;
+    letter-spacing: .45rem;
+ 
+}
+.Navbar{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+}
+.Navbar a{
+    display: block;
+    padding: 1em;
+    color: white;
+}
+.Hero{
+    background-image: url("/coffee.jpg");
+    height: 700px;
+   background-size: cover;
+   position: relative;
+}
