@@ -47,6 +47,13 @@
     font-size: 9pt;
 
 }
+.Navbar a:hover{
+    border-bottom: 3px solid rgb(240, 4, 4);
+    color: red;
+}
+.Navbar a.active{
+    border-bottom: 3px solid rgb(247, 7, 7);
+}
 .Hero{
     background-image: url("/cofe.jpg");
     height: 800px;
@@ -70,7 +77,11 @@ z-index: 10000;
 .Hero-overlay h3{
     font-family: 'Playfair Display', serif;
     font-size: 20x;
+    color:  red;
+    z-index: 200;
+    font-weight: bold;
 }
+
 .Hero-overlay button{
 border: 0;
 outline: 0;
@@ -90,5 +101,6 @@ font-style: italic;
 font-size: 12pt;
 }
 .Hero-overlay button:hover{
-background-color: transparent;
+background-color: red;
+border: 5px solid red;
 }
