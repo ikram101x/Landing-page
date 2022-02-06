@@ -11,8 +11,7 @@
     justify-content: space-between;
     align-items: center;
      background: white;
-     position: sticky;
-     height: 70px;
+     padding: 1rem 1.5rem;
 }
 .Logo{
     margin: 0 0 0 .60em;
@@ -37,8 +36,7 @@
     display: flex;
     list-style: none;
     align-items: center;
-    text-align: center;
-    margin-right: 15%;
+   
 }
 .Navbar a{
     display: block;
@@ -48,11 +46,57 @@
 
 }
 .Navbar a:hover{
-    border-bottom: 3px solid rgb(240, 4, 4);
+    border-bottom: 1px solid rgb(240, 4, 4);
     color: red;
+    width: inherit;
 }
-.Navbar a.active{
-    border-bottom: 3px solid rgb(247, 7, 7);
+
+.hamburger{
+    display: block;
+}
+.bar{
+    display: none;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: #1f1d1d;
+}
+@media only screen and (max-width: 768px){
+    .Navbar{
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: rgb(243, 217, 217);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    }
+    .Navbar:active{
+        left: 0;
+    }
+    .nav-item{
+        margin: 2.5rem 0;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger:active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger:active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger:active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
 }
 .Hero{
     background-image: url("/cofe.jpg");
@@ -77,9 +121,10 @@ z-index: 10000;
 .Hero-overlay h3{
     font-family: 'Playfair Display', serif;
     font-size: 20x;
-    color:  red;
+    color:  rgb(255, 255, 255);
     z-index: 200;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .Hero-overlay button{
@@ -102,5 +147,5 @@ font-size: 12pt;
 }
 .Hero-overlay button:hover{
 background-color: red;
-border: 5px solid red;
+border: 5px solid rgb(248, 248, 248);
 }
