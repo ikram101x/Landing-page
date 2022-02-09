@@ -1,69 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 
-.NavContainer{
+.NavContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-     background: white;
-     padding: 1rem 1.5rem;
+    background: white;
+    padding: 1rem 1.5rem;
 }
-.Logo{
+
+.Logo {
     margin: 0 0 0 .60em;
     font-size: 20px;
     padding-left: 2em;
-    
+
 }
-.Logo a{
+
+.Logo a {
     color: rgb(5, 5, 5);
     font-family: 'Playfair Display', serif;
 }
-.Logo, Navbar{
+
+.Logo, Navbar {
     list-style: none;
     text-transform: capitalize;
 }
-.Logo a, .Navbar a{
+
+.Logo a, .Navbar a {
     text-decoration: none;
     letter-spacing: .45rem;
- 
+
 }
-.Navbar{
+
+.Navbar {
     display: flex;
+    justify-content: space-between;
     list-style: none;
     align-items: center;
-   
+
 }
-.Navbar a{
+
+.Navbar a {
     display: block;
     padding: 3em;
     color: rgb(70, 70, 70);
     font-size: 9pt;
 
 }
-.Navbar a:hover{
+
+.Navbar a:hover {
     border-bottom: 1px solid rgb(240, 4, 4);
     color: red;
     width: inherit;
 }
 
-.hamburger{
-    display: block;
+.Hamburger {
+ display: none;
+
 }
-.bar{
-    display: none;
+
+.bar {
+    display: block;
     width: 25px;
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background-color: #1f1d1d;
 }
-@media only screen and (max-width: 768px){
-    .Navbar{
+
+@media only screen and (max-width: 768px) {
+    .Navbar {
         position: fixed;
         left: -100%;
         top: 5rem;
@@ -73,32 +86,37 @@
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
-    .Navbar:active{
+
+    .Navbar.active {
         left: 0;
     }
-    .nav-item{
+
+    .nav-item {
         margin: 2.5rem 0;
     }
-    .hamburger{
+
+    .Hamburger {
         display: block;
         cursor: pointer;
     }
-    .hamburger:active .bar:nth-child(2) {
+
+    .Hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger:active .bar:nth-child(1) {
+    .Hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
-    .hamburger:active .bar:nth-child(3) {
+    .Hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
 }
-.Hero{
+
+.Hero {
     background-image: url("/cofe.jpg");
     height: 800px;
     background-position: center;
@@ -107,45 +125,49 @@
     position: relative;
     z-index: 800;
 }
-.Hero-overlay{
-align-items: center;
-padding: 100px;
-padding-top: 300px;
-color: white;
-z-index: 10000;
+
+.Hero-overlay {
+    align-items: center;
+    padding: 100px;
+    padding-top: 300px;
+    color: white;
+    z-index: 10000;
 }
-.Hero-overlay h1{
+
+.Hero-overlay h1 {
     font-family: 'Playfair Display', serif;
     font-size: 80px;
 }
-.Hero-overlay h3{
+
+.Hero-overlay h3 {
     font-family: 'Playfair Display', serif;
     font-size: 20x;
-    color:  rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     z-index: 200;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-.Hero-overlay button{
-border: 0;
-outline: 0;
-display: inline-block;
-padding: 12px 35px;
-background-color: #000;
-color: white;
-text-align: center;
-cursor: pointer;
-border: 5px solid black;
-margin-left: -1px;
-margin-top: 5%;
-letter-spacing: 5px;
-font-weight: bold;
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-style: italic;
-font-size: 12pt;
+.Hero-overlay button {
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: 5px solid black;
+    margin-left: -1px;
+    margin-top: 5%;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 12pt;
 }
-.Hero-overlay button:hover{
-background-color: red;
-border: 5px solid rgb(248, 248, 248);
+
+.Hero-overlay button:hover {
+    background-color: red;
+    border: 5px solid rgb(248, 248, 248);
 }
